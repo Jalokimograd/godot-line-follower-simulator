@@ -20,6 +20,11 @@ func _init(kp_: float, ki_: float, kd_: float):
 	kd = kd_
 	last_time = Time.get_ticks_msec() / 1000.0
 
+func set_constants(new_kp: float, new_ki: float, new_kd: float) -> void:
+	kp = new_kp
+	ki = new_ki
+	kd = new_kd
+
 func compute():
 	var current_time = Time.get_ticks_msec() / 1000.0
 	var delta_time = current_time - last_time
